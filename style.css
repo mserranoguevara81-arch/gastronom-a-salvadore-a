@@ -1,0 +1,280 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fcf8f2;
+    color: #333;
+}
+
+.section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #4a03f0;
+    margin-bottom: 30px;
+}
+
+/* 2. NAVBAR FIJA */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #5a0aee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nav-logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffb142;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* 1. HERO SECTION */
+.hero-section {
+    background-image: url('https://unsplash.com');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    margin-top: 60px;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    color: #ffb142;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    color: white;
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.btn-cta {
+    background-color: #ffb142;
+    color: #333;
+    padding: 15px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: #cc8e35;
+    color: white;
+}
+
+/* 3. NOSOTROS */
+.nosotros-container p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 4. SERVICIOS (Tarjetas con Flexbox/Grid) */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid #ffb142;
+}
+
+.card h3 {
+    color: #0d40e9;
+    margin-bottom: 15px;
+}
+
+/* INTERACCIÓN EXTRA (Visor de imágenes) */
+.selector-botones {
+    margin-bottom: 25px;
+}
+
+.btn-platillo {
+    background-color: #ddd;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.btn-platillo.active, .btn-platillo:hover {
+    background-color: #3316d6;
+    color: white;
+}
+
+.visor-imagen img {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* 5. FORMULARIO Y VALIDACIÓN */
+.form-contacto {
+    background: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #4b12e7;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #8c2c2c;
+}
+
+.error-msg {
+    color: #b33939;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: block;
+}
+
+.exito-msg {
+    margin-top: 20px;
+    text-align: center;
+    color: #2ed573;
+    font-weight: bold;
+}
+
+/* 6. FOOTER */
+.footer {
+    background-color: #fcf6f6;
+    color: #aaa;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-redes a {
+    color: #ffb142;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; left: 0;
+        background-color: #32056d;
+        padding: 20px;
+        text-align: center;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+}
